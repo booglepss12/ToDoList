@@ -40,6 +40,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="PW3-0L-Wvi" kind="show" identifier="toDoComplete" id="IQD-1u-Wmi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnc-Bh-vIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,19 +87,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lWk-f2-ZWx" firstAttribute="leading" secondItem="o8V-Ex-pZB" secondAttribute="leading" id="0Xr-Nn-ACr"/>
-                            <constraint firstItem="o8V-Ex-pZB" firstAttribute="top" secondItem="osw-6W-KsM" secondAttribute="top" constant="20" id="3Fk-FI-mNj"/>
-                            <constraint firstItem="osw-6W-KsM" firstAttribute="trailing" secondItem="sq9-Hy-nG9" secondAttribute="trailing" constant="64" id="7dN-Bl-rZI"/>
-                            <constraint firstItem="sq9-Hy-nG9" firstAttribute="top" secondItem="o8V-Ex-pZB" secondAttribute="bottom" constant="81" id="BaU-GC-nOb"/>
-                            <constraint firstItem="QYk-2p-Ydc" firstAttribute="leading" secondItem="i2f-sB-NWw" secondAttribute="leading" id="EAX-aQ-g55"/>
-                            <constraint firstItem="o8V-Ex-pZB" firstAttribute="centerX" secondItem="sq9-Hy-nG9" secondAttribute="centerX" constant="44" id="LPu-nf-opx"/>
-                            <constraint firstItem="QYk-2p-Ydc" firstAttribute="top" secondItem="lWk-f2-ZWx" secondAttribute="bottom" constant="97" id="UtS-AW-u23"/>
-                            <constraint firstItem="o8V-Ex-pZB" firstAttribute="leading" secondItem="osw-6W-KsM" secondAttribute="leading" constant="166" id="Z3m-8x-Gn4"/>
-                            <constraint firstItem="sq9-Hy-nG9" firstAttribute="leading" secondItem="osw-6W-KsM" secondAttribute="leading" constant="91" id="ZT2-6a-sBQ"/>
-                            <constraint firstItem="i2f-sB-NWw" firstAttribute="centerX" secondItem="sq9-Hy-nG9" secondAttribute="centerX" id="h5p-dE-xfn"/>
-                            <constraint firstItem="sq9-Hy-nG9" firstAttribute="leading" secondItem="osw-6W-KsM" secondAttribute="leading" constant="91" id="hdy-eL-6uh"/>
-                            <constraint firstItem="lWk-f2-ZWx" firstAttribute="top" secondItem="sq9-Hy-nG9" secondAttribute="bottom" constant="87" id="pgg-jP-CnY"/>
-                            <constraint firstItem="lWk-f2-ZWx" firstAttribute="top" secondItem="i2f-sB-NWw" secondAttribute="bottom" constant="23" id="wps-dP-AVI"/>
+                            <constraint firstItem="o8V-Ex-pZB" firstAttribute="leading" secondItem="lWk-f2-ZWx" secondAttribute="leading" id="6ta-xi-j22"/>
+                            <constraint firstItem="o8V-Ex-pZB" firstAttribute="top" secondItem="osw-6W-KsM" secondAttribute="top" constant="20" id="DIl-3E-fJa"/>
+                            <constraint firstItem="QYk-2p-Ydc" firstAttribute="top" secondItem="lWk-f2-ZWx" secondAttribute="bottom" constant="97" id="MY1-TI-vaB"/>
+                            <constraint firstItem="osw-6W-KsM" firstAttribute="trailing" secondItem="o8V-Ex-pZB" secondAttribute="trailing" constant="51" id="NfT-rH-wZd"/>
+                            <constraint firstItem="i2f-sB-NWw" firstAttribute="leading" secondItem="QYk-2p-Ydc" secondAttribute="leading" id="NgP-Gu-8Vh"/>
+                            <constraint firstItem="i2f-sB-NWw" firstAttribute="leading" secondItem="osw-6W-KsM" secondAttribute="leading" constant="177" id="R0q-JB-ftb"/>
+                            <constraint firstItem="sq9-Hy-nG9" firstAttribute="centerX" secondItem="i2f-sB-NWw" secondAttribute="centerX" id="WZt-SO-Z0n"/>
+                            <constraint firstItem="o8V-Ex-pZB" firstAttribute="leading" secondItem="osw-6W-KsM" secondAttribute="leading" constant="166" id="bhg-dT-ols"/>
+                            <constraint firstItem="lWk-f2-ZWx" firstAttribute="top" secondItem="i2f-sB-NWw" secondAttribute="bottom" constant="23" id="mee-Sj-OkO"/>
+                            <constraint firstItem="i2f-sB-NWw" firstAttribute="top" secondItem="sq9-Hy-nG9" secondAttribute="bottom" constant="33" id="tmD-Oh-ULf"/>
+                            <constraint firstItem="sq9-Hy-nG9" firstAttribute="top" secondItem="o8V-Ex-pZB" secondAttribute="bottom" constant="81" id="x70-pu-646"/>
+                            <constraint firstItem="sq9-Hy-nG9" firstAttribute="leading" secondItem="osw-6W-KsM" secondAttribute="leading" constant="91" id="xce-Ht-oCg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="osw-6W-KsM"/>
                     </view>
@@ -108,6 +110,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjX-ME-Iq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2007" y="128"/>
+        </scene>
+        <!--Completed View Controller-->
+        <scene sceneID="69A-Qd-v61">
+            <objects>
+                <viewController id="PW3-0L-Wvi" customClass="CompletedViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uXs-vN-a3k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEp-1C-FY8">
+                                <rect key="frame" x="6" y="180" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFz-gP-g9H">
+                                <rect key="frame" x="131" y="270" width="114" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeButton:" destination="PW3-0L-Wvi" eventType="touchUpInside" id="Kya-E9-Jjb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oEp-1C-FY8" firstAttribute="leading" secondItem="mlh-sL-C5S" secondAttribute="leading" constant="6" id="P4r-9U-dLD"/>
+                            <constraint firstItem="oEp-1C-FY8" firstAttribute="top" secondItem="mlh-sL-C5S" secondAttribute="top" constant="116" id="Se8-Ks-mrX"/>
+                            <constraint firstItem="oEp-1C-FY8" firstAttribute="centerX" secondItem="uXs-vN-a3k" secondAttribute="centerX" id="ccB-Fs-pXv"/>
+                            <constraint firstItem="JFz-gP-g9H" firstAttribute="top" secondItem="oEp-1C-FY8" secondAttribute="bottom" constant="47" id="fcg-bn-B9Q"/>
+                            <constraint firstItem="JFz-gP-g9H" firstAttribute="centerX" secondItem="oEp-1C-FY8" secondAttribute="centerX" id="sCq-Et-CYY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mlh-sL-C5S"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="oEp-1C-FY8" id="1FR-aN-jVQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Irv-JG-Zoq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="912"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0WE-HM-rnf">
